@@ -42,11 +42,11 @@ def upload():
         #with graph.as_default():
         preds = model.predict_classes(x)
             
-        print("prediction",preds)
+        #print("prediction",preds)
             
-        index = ['Conglomerate','Diorate','Fire opal','Genisis','Limestone','Obsidian','Slate']
+        labels = ['Conglomerate','Diorate','Fire opal','Genisis','Limestone','Obsidian','Slate']
         
-        text = "the predicted rock is : " + str(index[preds[0]])
+        text = "the predicted rock is : " + str(labels[preds[0]])
         
     return text
 if __name__ == '__main__':
